@@ -17,6 +17,6 @@ export class CameraService {
     formdata.set("complain", form['complain']);
     formdata.set("imageFile", image);
 
-    return firstValueFrom(this.http.post<UploadResult>("/upload", formdata));
+    return firstValueFrom(this.http.post<UploadResult>("/upload-ng", formdata));
   }
 }

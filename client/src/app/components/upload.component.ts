@@ -28,6 +28,7 @@ export class UploadComponent implements OnInit{
     this.blob = this.dataURItoBlob(this.imageData)
   }
 
+  // Creating and setting form fields
 private createForm(): FormGroup{
   return this.fb.group({
     title: this.fb.control<string>(''),
@@ -44,7 +45,7 @@ upload(){
     this.router.navigate(['/']);
   })
 }
-
+// Translate Data URL to Blob
 dataURItoBlob(dataURI: string){
   var byteString = atob(dataURI.split(',')[1]);
   let mimeString = dataURI.split(',')[0].split(';')[0]
